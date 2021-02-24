@@ -36,7 +36,7 @@ fn main() {
     let instance = linker.instantiate(&module).unwrap();
 
     // call function that mallocs a pointer in the wasm instance and writes 42 to it
-    let f = linker.get_one_by_name("", Some("malloc_and_write")).unwrap().into_func().unwrap();
+    let f = instance.get_func("malloc_and_write").unwrap();
     let ret = f.call(&vec![]).unwrap();
     let index = (*ret).first().map(|a| a.clone()).unwrap().unwrap_i32();
 
