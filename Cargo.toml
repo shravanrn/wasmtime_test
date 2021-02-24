@@ -1,0 +1,16 @@
+[package]
+name = "wasmtime_test"
+version = "0.1.0"
+authors = ["shravanrn@gmail.com <shravanrn@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.19"
+wasmtime = { git = "https://github.com/bytecodealliance/wasmtime", branch = "main" }
+wasmtime-runtime = { git = "https://github.com/bytecodealliance/wasmtime", branch = "main"}
+wasmtime-wasi = { git = "https://github.com/bytecodealliance/wasmtime", branch = "main" }
+wasi-common = { git = "https://github.com/bytecodealliance/wasmtime", branch = "main" }
+wasi-cap-std-sync = { git = "https://github.com/bytecodealliance/wasmtime", branch = "main" }
+
